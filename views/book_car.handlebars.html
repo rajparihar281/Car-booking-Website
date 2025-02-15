@@ -1,0 +1,133 @@
+<head>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+  .book_car {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  .heading {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .name-input,
+  .email-input,
+  .phone-input,
+  .model-input,
+  .number-input,
+  .date-input,
+  .time-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  .book_car{
+    margin-top: 12vh;
+  }
+</style>
+</head>
+<body>
+  
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="book_car" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK CAR</a>
+      <a href="add_car" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ADD CAR</a>
+    <a href="contact_us" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+  <!-- book car-->
+<div class="book_car" style="max-width:800px"id="book">
+  <u> <h2 class="heading">BOOK CAR</h2> </u>
+       <form action="/book_router/add" method="POST">
+            <div class="form-field">
+                            <span class="form-label">NAME</span>
+                            <input class="name-input" name="name" type="text" placeholder="ENTER YOUR NAME">
+                        </div>
+                        <div class="form-field">
+                            <span class="form-label">EMAIL ID</span>
+                            <input class="email-input" name="email" type="email" placeholder="ENTER YOUR EMAIL">
+                        </div>
+                <div class="form-field">
+                    <span class="form-label">PHONE NUMBER</span>
+                    <input class="phone-input" type="tel" name="number" placeholder="ENTER YOUR PHONE NUMBER">
+                </div>
+                               <div class="form-field">
+                    <span class="form-label">CAR MODEL</span>
+                    <input class="model-input" type="text" name="car_model" placeholder="ENTER CAR MODEL">
+                </div>
+ <div class="form-field">
+                    <span class="form-label">CAR NUMBER</span>
+                    <input class="number-input" type="text" name="car_number" placeholder="ENTER CAR NUMBER">
+                </div>
+                    <div class="form-field">
+                            <span class="form-label">PICK UP DATE</span>
+                            <input class="date-input"  name="date" type="date" min='1899-01-01' max='2030-12-12'>
+                        </div>                    
+                                <div class="form-field">
+                                    <span class="form-label">TIME</span>
+                                    <input type="time" name="time" class="time-input">
+                                                            </div>
+                <div class="form-field">
+                    <button class="submit-btn" onclick="message()"><span>BOOK NOW</span></button>
+                </div>
+            </form>   
+        </div>
+    </div>
+  </div> 
+  {{#each book_car}}
+  <p>name:{{this.name}}</p>
+  
+  <p>name:{{this.email}}</p>
+  <p>name:{{this.number}}</p>
+  <p>name:{{this.car_model}}</p>
+  <p>name:{{this.car_number}}</p>
+  <p>name:{{this.date}}</p>
+  <p>name:{{this.time}}</p>
+{{/each}}
+</body>

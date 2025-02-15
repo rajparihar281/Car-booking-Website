@@ -1,0 +1,82 @@
+<head>
+  <style>
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button.form-input {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button.form-input:hover {
+    background-color: #45a049;
+  }
+  .field{
+    padding-top: 10vh;
+  }
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+<a href="home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="book_car" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK CAR</a>
+      <a href="add_car" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ADD CAR</a>
+    <a href="contact_us" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+<div class="field">
+<form action="/add_router/add" method="post">
+<div class="form-field">
+  <input class="form-input" name="name" type="text" placeholder="ENTER YOUR NAME">
+</div>
+<div class="form-field">
+  <input class="form-input" name="email" type="email" placeholder="ENTER YOUR EMAIL">
+</div>
+<div class="form-field">
+  <input class="form-input" name="car_model" type="text" placeholder="ENTER YOUR CAR MODEL">
+</div>
+<div class="form-field">
+  <input class="form-input" name="car_number" type="text" placeholder="ENTER YOUR CAR NUMBER">
+</div>
+<div class="form-field">
+  <input class="form-input" name="available" type="date" placeholder="DATE AVAIALBLE FROM"> 
+</div>
+<div class="form-field">
+  <input class="form-input" name="till" type="date" placeholder="DATE AVAILABLE TILL">
+  </div>
+  <div class="form-field">
+  <input class="form-input" name="cn" type="tel" placeholder="ENTER YOUR PHONE NUMBER">
+</div>
+<div class="form-field">
+                    <button class="form-input" type="submit" value="ADD CAR">ADD CAR</button>
+                </div>
+</form>
+</div>
+      

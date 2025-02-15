@@ -1,0 +1,135 @@
+<head>
+  <style>
+    body{
+      background-color: lightgray;
+    }
+  .contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .heading {
+    text-align: center;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .sub-heading {
+    text-align: center;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .info-section {
+    flex: 1;
+  }
+
+  .info-section i {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+  }
+
+  .form-section {
+    flex: 1;
+  }
+
+  .form-fields {
+    margin: 0 -16px 8px -16px;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .name-input,
+  .email-input,
+  .message-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .button-input {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button-input:hover {
+    background-color: #45a049;
+  }
+  .contact-section{
+    margin-top: 12vh;
+  }
+</style>
+</head>
+<body >
+  <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="book_car" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK CAR</a>
+      <a href="add_car" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ADD CAR</a>
+    <a href="contact_us" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+<!-- The Contact Section -->
+  <div class="contact-section" style="max-width:800px" id="contact">
+    <h2 class="heading">CONTACT US</h2>
+    <p class="sub-heading"><i>Any Query? Drop Here</i></p>
+    <div class="contac-info">
+      <div class="info-section">
+        <i class="address-i" style="width:30px"></i> Mumbai, INDIA<br>
+        <i class="phone-i" style="width:30px"></i> Phone: +91 9987357067<br>
+        <i class="email-i" style="width:30px"> </i> Email: xyz123@gmail.com<br>
+      </div>
+      <div class="form-section">
+        <form action="/contact_router/add" method="post" >
+          <div class="form-fields" style="margin:0 -16px 8px -16px">
+            <div class="form-field">
+              <input class="name-input" type="text" placeholder="Name"  name="name">
+            </div>
+            <div class="form-field">
+              <input class="email-input" type="text" placeholder="Email"name="email">
+          </div>
+          <div class="form-field">
+          <input class="message-input" type="text" placeholder="Message" name="message">
+          </div>
+          <div class="form-field">
+          <button class="button-input" type="submit">SEND</button>
+          </div>
+          </div>
+    </div>
+        </form>
+        </div>
+   </body>

@@ -1,0 +1,105 @@
+.heading{
+    padding-top: 5%;
+    font-size: 2.5em; 
+    text-align: center;
+    font-weight: 500 !important;
+}
+
+table,th,td{
+    border: none;
+    border-bottom: 2px solid black;
+    border-collapse: collapse;
+
+}
+table{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 90%;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+    font-family: Lato, sans-serif !important;
+}
+td{
+    font-family: Montserrat, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 1.2em;
+}
+th{
+    background-color: #2980b9;
+    color: #fff !important;
+    font-family: Lato, sans-serif !important;
+    font-size: 1.5em;
+    font-weight: 400 !important;
+}
+tr{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+tr:hover{
+    background-image: linear-gradient(60deg, #c7e7e6 0%, #c7e7e6 100%); 
+}
+
+
+img{
+    width: 8em;
+    height: 6em;
+}
+img {
+    transition: -webkit-transform 0.25s ease;
+}
+
+img:active {
+    -webkit-transform: scale(5);
+}
+
+.button_add{
+    height: 3em;
+    width: 8em;
+    font-size: 2.4em;
+    font-weight: 500;
+    font-family: Lato, sans-serif !important;
+    background-color: transparent;
+    border: none;
+
+}
+.button_add:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+@media(max-width: 56em)
+{
+  .two_box{
+    padding-top: 15%;
+    display: block;  
+    text-align: center;
+    /*background-color: #00596f !important;*/
+    background-opacity: 0.5;
+  }
+  .car_image{
+    height: 20em;
+    width: 20em;
+    border-radius: 20%;
+  }
+}
+
+@media(min-width: 56.1em)
+{
+  .two_box{
+    height:100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    grid-gap: justify;
+    text-align: center; 
+  }
+  .car_image{
+    height: 20em;
+    width: 20em;
+    border-radius: 20%;
+  }
+}
